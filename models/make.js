@@ -12,4 +12,4 @@ MakeSchema
     return `/catalog/make/${this._id}`;
   });
 
-modules.exports = mongoose.model('Make', MakeSchema);
+module.exports = mongoose.model('Make', MakeSchema);
