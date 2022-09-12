@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+  h1= title 
+
+  p #[strong Name:] !{model_detail.name}
+  p #[strong Trim:] !{model_detail.trim}
+  p #[strong Year:] !{model_detail.year}
+
+  hr
+
+  p 
+    a(href=model_detail.url+'/update') Update Model
+  p
+    a(href=model_detail.url+'/delete') Delete Model

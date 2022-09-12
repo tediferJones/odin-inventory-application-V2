@@ -1,4 +1,4 @@
-const Make = require('../controllers/make');
+const Make = require('../models/make');
 
 exports.make_list = (req, res, next) => {
   res.send('NOT IMPLEMENTED: Make List');

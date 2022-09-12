@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to #[em My Car Dealership], a very basic Express website developed with help from the Mozilla Developer Network.
+
+  h1 Dynamic content
+
+  if error
+    p Error getting dynamic contentn.
+  else 
+    p The dealership currently has the following options available: 
+      ul 
+        li #[strong Makes:] !{data.make_count}
+        li #[strong Models:] !{data.model_count}
+        li #[strong Accessories:] !{data.accessory_count}
+        li #[strong Vehicles:] !{data.vehicle_count}
