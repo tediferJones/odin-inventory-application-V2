@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+  h1= title 
+
+  p #[strong Name:] !{make.name}
+
+  hr
+
+  h4 Are you sure you want to delete this make?
+
+  form(method='POST' action='')
+    div.form-group
+      input#makeid.form-control(type='hidden' name='makeid' require='true' value=make.id)
+    button.btn.btn-primary(type='submit') Delete

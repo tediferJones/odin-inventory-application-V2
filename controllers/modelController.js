@@ -77,8 +77,6 @@ exports.model_create_post = [
         .exec((err, found_model) => {
           if (err) { return next(err); }
 
-          console.log(found_model)
-
           if (found_model) {
             res.redirect(found_model.url)
           } else {
