@@ -1,0 +1,15 @@
+extends layout 
+
+block content 
+  h1= title 
+
+  p #[strong Name:] !{accessory.name}
+
+  hr
+
+  h4 Are you sure you want to delete this accessory?
+
+  form(method='POST' action='')
+    div.form-group
+      input#accessoryid.form-control(type='hidden' name='accessoryid' require='true' value=accessory.id)
+    button.btn.btn-primary(type='submit') Delete

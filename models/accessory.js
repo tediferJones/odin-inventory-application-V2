@@ -9,7 +9,8 @@ const AccessorySchema = new Schema({
 AccessorySchema
   .virtual('url')
   .get(function() {
-    return 'catalog/accessory/' + this._id;
+    // return 'catalog/accessory/' + this._id; THIS LINE IS GARBAGE, NO IDEA WHY
+    return `/catalog/accessory/${this._id}`;
   });
 
 module.exports = mongoose.model('Accessory', AccessorySchema);

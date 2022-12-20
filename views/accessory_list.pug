@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+  h1= title 
+
+  ul 
+    each accessory in accessories_list 
+      li 
+        a(href=accessory.url) #{accessory.name}
+    
+    else 
+      li There are no accessories

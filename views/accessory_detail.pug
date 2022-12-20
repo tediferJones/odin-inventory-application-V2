@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+  h1= title
+
+  p #[strong Name:] !{accessory_detail.name}
+
+  hr
+
+  p 
+    a(href=accessory_detail.url + '/update') Update Accessory
+  p 
+    a(href=accessory_detail.url + '/delete') Delete Accessory
