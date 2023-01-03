@@ -10,9 +10,10 @@ var catalogRouter = require('./routes/catalog');
 
 var app = express();
 
+require('dotenv').config();
+
 const mongoose = require('mongoose');
-const mongoDB = 'mongodb+srv://tedifer_jones:dEem0K0vOyMev3TV@cluster0.d2i7bj0.mongodb.net/odin-inventory-application-V2?retryWrites=true&w=majority';
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.mongoDB, { useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
